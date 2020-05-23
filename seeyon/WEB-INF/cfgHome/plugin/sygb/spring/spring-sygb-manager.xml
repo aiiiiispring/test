@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName">
+    <!-- 国博公文流程结束事件 -->
+    <bean id="gbEDocEventFlowFinishedListener" class="com.seeyon.apps.sygb.listener.GbDocEventFlowFinishedListener"/>
+    <!--国博公文管理类-->
+    <bean id="gbDocManager" class="com.seeyon.apps.sygb.manager.GbDocManagerImpl"/>
+    <!--国博第三方系统注册管理类-->
+    <bean id="authenticationManager" class="com.seeyon.apps.sygb.manager.AuthenticationManagerImpl"/>
+    <!--国博调用第三方接口类-->
+    <bean id="thirdPartyManager" class="com.seeyon.apps.sygb.manager.ThirdPartyManagerImpl"/>
+    <!--国博日志记录类-->
+    <bean id="gbEdocLogManager" class="com.seeyon.apps.sygb.manager.GbEdocLogManagerImpl"/>
+       <!--国博待办已办任务类-->
+    <bean id="gbTaskManager" class="com.seeyon.apps.sygb.manager.GbTaskManagerImpl"/>
+         <!-- 国博消息推送类-->
+    <bean id="gbMessageManager" class="com.seeyon.apps.sygb.manager.GbMessageManagerImpl"/>
+</beans>

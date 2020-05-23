@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.seeyon.apps.sygb.po">
+    <class name="SummaryAuthenticationPo" table="SUMMARY_AUTHENTICATION">
+        <id name="id" type="long" column="id" length="21">
+            <generator class="assigned"/>
+        </id>
+        <property name="summaryId" type="long" column="SUMMARY_ID" length="21" not-null="false"/>
+        <property name="authenticationId" type="long" column="REGISTER_ID" length="21" not-null="false"/>
+        <property name="thirdBusinessCode" type="string" column="THIRD_BUSINESS_CODE"/>
+    </class>
+</hibernate-mapping>

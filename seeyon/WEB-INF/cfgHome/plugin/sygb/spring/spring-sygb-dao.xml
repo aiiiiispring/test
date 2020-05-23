@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+    <!--国博第三方系统注册DAO类-->
+    <bean id="authenticationDao" class="com.seeyon.apps.sygb.dao.AuthenticationDaoImpl"/>
+    <!--国博第三方日志记录DAO类-->
+    <bean id="gbEdocLogDao" class="com.seeyon.apps.sygb.dao.GbEdocLogDaoImpl"/>
+  <!--   国博待办已办任务DAO类-->
+    <bean id="gbTaskDao" class="com.seeyon.apps.sygb.dao.GbTaskDaoImpl"/>
+    <!-- 国博消息推送DAO类-->
+    <bean id="gbMessageDao" class="com.seeyon.apps.sygb.dao.GbMessageDaoImpl"/>
+
+    <bean id="gbThirdPendingDao" class="com.seeyon.apps.sygb.dao.GbThirdPendingDaoImpl"></bean>
+</beans>
+    

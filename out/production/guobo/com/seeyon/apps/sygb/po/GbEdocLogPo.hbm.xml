@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.seeyon.apps.sygb.po">
+    <class name="GbEdocLogPo" table="GB_EDOC_LOG">
+        <id name="id" type="long" column="id" length="21">
+            <generator class="assigned"/>
+        </id>
+        <!--系统编号-->
+        <property name="systemCode" type="string" column="SYSTEM_CODE" length="256" not-null="false"/>
+        <property name="systemName" type="string" column="SYSTEM_NAME" length="256" not-null="false"/>
+        <!--   操作用户ID     -->
+        <property name="memberId" type="long" column="MEMBER_ID" length="21" not-null="false"/>
+        <property name="url" type="string" column="URL" length="500" not-null="false"/>
+        <property name="actionType" type="integer" column="ACTION_TYPE"/>
+        <property name="moduleType" type="integer" column="MODULE_TYPE"/>
+        <property name="createTime" type="timestamp" column="CREATE_TIME" not-null="false"/>
+        <property name="dataJson" type="string" column="DATA_JSON"/>
+        <property name="resultType" type="integer" column="RESULT_TYPE"/>
+        <property name="resultInfo" type="string" column="RESULT_INFO"/>
+    </class>
+</hibernate-mapping>

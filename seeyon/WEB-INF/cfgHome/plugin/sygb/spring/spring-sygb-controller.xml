@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+    <!-- 国博第三方系统注册控制类 -->
+	<bean name="/sygb/authenticationController.do" class="com.seeyon.apps.sygb.controller.AuthenticationController"/>
+    <!-- 国博第三方系统日志记录控制类 -->
+    <bean name="/sygb/gbEdocLog.do" class="com.seeyon.apps.sygb.controller.GbEdocLogController"/>
+    <!-- 国博待办已办业务返回类-->
+    <bean name="/sygb/ssoController.do" class="com.seeyon.apps.sygb.controller.GbTaskBusinessController"/>
+
+</beans>
